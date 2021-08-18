@@ -1,0 +1,78 @@
+<canvas width="600" height="400" ></canvas>
+
+<script>
+		
+		var tela = document.querySelector ('canvas');
+		var pincel = tela.getContext ('2d');
+
+		pincel.fillStyle = 'lightgray';
+		pincel.fillRect (0, 0, 600, 400)
+
+	function quadrado(x, y, cor) {
+
+		pincel.fillStyle = cor ;
+		pincel.fillRect (x, y, 20, 20);
+    }
+
+    function desenha(x, y, direção, cor, quantidade) {
+
+    	var i = 0;
+    	var coordenada = 0;
+
+    	if (direção) {
+   	    	while ( i < quantidade) {
+
+    			quadrado(x + coordenada, y, cor);
+    			coordenada = coordenada + 20;
+    			i++;
+    		}
+    	}
+
+    	if (direção == false) {
+
+    		while ( i < quantidade) {
+
+    			quadrado (x, y + coordenada, cor);
+    			coordenada = coordenada + 20;
+    			i++;
+    		}
+    	}
+    }
+
+    desenha(20, 60, false, 'black', 3);
+    quadrado(40, 40, 'black');
+    desenha(60, 20, true, 'black', 3);
+    quadrado(120, 40, 'black');
+    quadrado(140, 60, 'black');
+    quadrado(160, 40, 'black');
+    desenha(180, 20, true, 'black', 3);
+    quadrado(240, 40, 'black');
+    desenha(260, 60, false, 'black', 3);
+    quadrado(40, 120, 'black');
+    quadrado(60, 140, 'black');
+    quadrado(80, 160, 'black');
+    quadrado(100, 180, 'black');
+    quadrado(120, 200, 'black');
+    quadrado(140, 220, 'black');
+    quadrado(160, 200, 'black');
+    quadrado(180, 180, 'black');
+    quadrado(200, 160, 'black');
+    quadrado(220, 140, 'black');
+    quadrado(240, 120, 'black');
+
+    desenha(40, 60, false, 'red', 3);
+    desenha(60, 40, false, 'red', 5);
+    desenha(80, 40, false, 'red', 6);
+    desenha(100, 40, false, 'red', 7);
+    desenha(120, 60, false, 'red', 7);
+    desenha(140, 80, false, 'red', 7);
+    desenha(160, 60, false, 'red', 7);
+    desenha(180, 40, false, 'red', 7);
+    desenha(200, 40, false,  'red', 6);
+    desenha(220, 40, false, 'red', 5);
+    desenha(240, 60, false, 'red', 3);
+
+    desenha(60, 60, true, 'white', 2);
+    quadrado(60, 80, 'white');
+
+</script>
