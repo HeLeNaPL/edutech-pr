@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+
+<h1>
+
+<script>
+	
+	function mostra(frase) {
+
+		document.write (frase);
+	}
+
+	var conta = parseInt(prompt("selecione o número do sinal da sua equação: \n1 - adição \n2 - subtração \n3 - multiplicação \n4 - divisão"));
+
+	
+	if (conta == 1) {
+
+		var nmr1A = parseInt(prompt("qual o primeiro número a ser somado?"));
+		var nmr2A = parseInt(prompt("qual o segundo número a ser somado?"));
+
+		mostra (nmr1A + " + " + nmr2A + " = " + (nmr1A + nmr2A));
+	}
+
+	if (conta == 2) {
+
+		var nmr1S = parseInt(prompt("qual o primeiro número a ser subtraido?"));
+		var nmr2S = parseInt(prompt("qual o segundo número a ser subtraido?"));
+
+		mostra (nmr1S + " - " + nmr2S + " = " + (nmr1S - nmr2S));
+	}
+
+	if (conta == 3) {
+
+		var nmr1M = parseInt(prompt("qual o primeiro número a ser multiplicado?"));
+		var nmr2M = parseInt(prompt("qual o segundo número a ser multiplicado?"));
+
+		mostra (nmr1M + " x " + nmr2M + " = " + (nmr1M * nmr2M));
+	}
+
+	if (conta == 4) {
+
+		var nmr1D = parseInt(prompt("qual o primeiro número a ser dividido?"));
+		var nmr2D = parseInt(prompt("qual o segundo número a ser dividido?"));
+
+		mostra (nmr1D + " ÷ " + nmr2D + " = " + (nmr1D / nmr2D));
+	}
+
+</script>
+
+</h1>
